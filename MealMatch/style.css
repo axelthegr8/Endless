@@ -1,0 +1,91 @@
+/********************************************************************************************/
+/************************************** GENERAL *********************************************/
+/********************************************************************************************/
+
+
+/*** TEXT-STYLE ***/
+@font-face {
+    font-family: 'RammettoOne'; /*a name to be used later*/
+    src: url('/font/RammettoOne-Regular.ttf'); /*URL to font*/
+}
+h2 {
+    color: rgb(75,75,75);
+    
+}
+
+/*** CLASS ***/
+.panel {
+    border: 1px solid rgb(189, 65, 4);
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+/*** Navigation bar, at top of every site ***/
+.navbar {
+    margin-bottom: 0;
+    background-color: rgb(189, 65, 4);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px 0important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+.navbar li a {
+    color: #fff !important;
+}
+/***  ***/
+
+/*** ID ***/
+
+
+/********************************************************************************************/
+
+
+
+/********************************************************************************************/
+/************************************** INDEX ***********************************************/
+/********************************************************************************************/
+
+
+/*** CLASS ***/
+
+
+.startPage {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.2)), url("images/vegetables.jpg");
+    background-size: cover;
+    padding-top: 7em;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 35em;
+}
+
+/*** ID ***/
+
+#matchme {
+    margin-top: 0.7em;
+    color: white;
+    background-color: rgb(189,65,4);
+    font-family: RammettoOne;
+    font-size: 1.75em
+}
+#searchButton {
+    background-image: url(images/search.png);
+    background-size: cover;
+    background-color: white;
+    width:33px;
+    height: 33px
+
+}
+
+
+/********************************************************************************************/
+

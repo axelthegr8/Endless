@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meal Match</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- Adjusts with the display size, responsive -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="indexPage">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="navText">
+                    <li><a href="">RECIPES</a></li>
+                    <li><a href="">UNIT CONVERSION</a></li>
+                    <li><a href="">LANGUAGE</a></li>
+                    <li><a href="">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="startPage text-center">
+        <img src="images/logo.png" alt="Logo" width="575" height="">
+        <h2>We specialize in recipe matching</h2>
+        <form>
+            <div class="input-group">
+                <input type="ingredient" class="form-control" size="50" placeholder="Add ingredient..." required>
+                <div class="input-group-btn">
+                    <button type="button" class="btn" id="searchButton"></button>
+                    <button type="button" class="btn btn-success" id="plusButton">+</button>
+                    
+                </div>
+            </div>
+        </form>
+        <button type="button" class="btn" id="matchme">Match me</button>
+    </div>
+
+</body>
