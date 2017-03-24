@@ -14,6 +14,10 @@ h2 {
 }
 
 /*** CLASS ***/
+.container {
+    width:auto;
+}
+
 .panel {
     border: 1px solid rgb(189, 65, 4);
     border-radius: 0 !important;
@@ -22,30 +26,72 @@ h2 {
 /*** Navigation bar, at top of every site ***/
 .navbar {
     margin-bottom: 0;
-    background-color: rgb(189, 65, 4);
+    background-color: rgba(250,250,250,0.9);
     z-index: 9999;
     border: 0;
-    font-size: 12px 0important;
+    font-size: 12px !important;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
-    color: #fff !important;
+    color: rgb(189,65,4) !important;
 }
-.navbar-nav li a:hover,
-.navbar-nav li.active a {
+.navbar-nav li #menu:hover,
+.navbar-nav li.active #menu {
     color: #f4511e !important;
     background-color: #fff !important;
 }
-.navbar li a {
-    color: #fff !important;
+
+
+
+.navbar-brand {
+    padding: 0.2em;
+    
+    
 }
+.navbar-brand>img {
+    height: 100%;
+    width: auto;
+    
+}
+
 /***  ***/
 
 /*** ID ***/
 
+#facebook:hover{
+    color: #fff !important;
+    background-color:#496ebc !important; 
+}
+#menu {
+    color: rgb(189,64,4)
+}
+
+#login-dp {
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(250,250,250,0.8);
+}
+
+#login-dp .help-block {
+    font-size:12px    
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+    letter-spacing: normal;
+    background-color:#3b5998;
+    color: #fff; 
+}
+
+#login-dp .form-group {
+    margin-bottom: 1em;
+}
 
 /********************************************************************************************/
 
@@ -87,5 +133,20 @@ h2 {
 }
 
 
+
 /********************************************************************************************/
+
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
 
