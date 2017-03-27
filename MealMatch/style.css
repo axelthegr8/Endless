@@ -1,178 +1,284 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Meal Match</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Adjusts with the display size, responsive -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body id="indexPage">
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right" id="navText">
-                    <li><a id="admin_menu" href="">ADMIN</a></li>
-                    <li id="admin_menu">|<br>|<br>|</li>
-                    <li><a id="user_menu" href="">MY GROCERIES</a></li>
-                    <li><a id="user_menu" href="">MY RECIPES</a></li>
-                    <li><a id="user_menu" href="">MY FAVORITES</a></li>
-                    <li><a id="user_menu" href="">SETTINGS</a></li>
-                    <li id="user_menu">|<br>|<br>|</li>
-                    <li><a id="menu" href="">RECIPES</a></li>
-                    <li><a id="menu" href="">UNIT CONVERSION</a></li>
-                    <li class="dropdown">
-                        <a id="menu" href="#" class="dropdown-toggle" data-toggle="dropdown">LOGIN<span class="caret"></span></a>
-                        <ul class="dropdown-menu" id="login-dp">
-                            <li>
-                                <div class="login">
-                                    <p>Login via</p>
-                                    <div class="social-buttons">
-                                        <a class="btn btn-block btn-social btn-facebook" id="facebook" href="www.facebook.com"><span class="fa fa-facebook"></span>Facebook</a>
+/********************************************************************************************/
+/************************************** GENERAL *********************************************/
+/********************************************************************************************/
 
 
-                                    </div>
-                                    or
-                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Email adress</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email adress" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                            <div class="help-block text-right"><a href="">Forgot your password ?</a></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-											 <input type="checkbox"> Keep me logged-in
-											 </label>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="bottom text-center">
-                                    <a href="#"><b>Sign up</b></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+/*** TEXT-STYLE ***/
+@font-face {
+    font-family: 'RammettoOne'; /*a name to be used later*/
+    src: url('/font/RammettoOne-Regular.ttf'); /*URL to font*/
+}
+h2 {
+    color: rgb(75,75,75);
+}
 
-    <div class="startPage text-center">
-        <div class="container_logo">
-            <img src="images/logo.png" alt="Logo" width="100%" height="auto">
-            
-        </div>
-        <h2>We specialize in recipe matching</h2>
-        <div class="container_searchbar">
-        <form class="search_bar">
-            <div class="input-group">
-                <span class="glyphicon glyphicon-search"></span>
-                <input type="text" id="ingredient-form" class="form-control" size="50" placeholder="Add ingredient..." required>
-                <div class="search-bar_clear">
-                    <span class="glyphicon glyphicon-remove"></span>
-                </div>
-                <span class="glyphicon glyphicon-plus"></span>
+/*** CLASS ***/
+.container {
+    width:auto;
+}
 
-                    <button type="button" class="btn btn-info dropdown-toggle" id="plus" data-toggle="dropdown">Alternatives
-        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Vegetarian</a></li>
-                        <li><a href="#">Gluten free</a></li>
-                        <li><a href="#">Laktos free</a></li>
-                    </ul>
+.panel {
+    border: 1px solid rgb(189, 65, 4);
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+/*** Navigation bar, at top of every site ***/
+.navbar {
+    margin-bottom: 0;
+    background-color: rgba(250,250,250,0.9);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: rgb(189,65,4) !important;
+}
+.navbar-nav li #menu:hover,
+.navbar-nav li.active #menu {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
 
 
 
-                
-            </div>
-        </form>
-        </div>
-        <div class="container_ingredients">
-            <div class="rows_ingredients">
-                <div class="column_ingredients">
-
-
-                    <form class="search_bar">
-                        <div class="input-group">
-
-                            <input type="text" id="ingredient-form" class="form-control" size="50" placeholder="THIS IS YOUR INGREDIENT" required>
-                            <div class="search-bar_clear">
-                                <button type="button" class="btn" id="clearButton"><img src="http://www.istockphoto.com/landing/assets/unisporkal_engine/images/istock/istock_global-d7e401f19e6c19a9675205710664aae57336b66879fca2e2f55bdd926ea590f1.svg#clear-icon" id="search_clear"></button>
-                            </div>
-
-
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-
-        <!--        <button type="button" class="btn" id="matchme">Match me</button>-->
-
-    </div>
-
-
-    <footer class="container-fluid text-center">
-        <a href="#TOP" title="To top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-        </a>
-        <a href="#BOTTOM" title="To bottom">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-        </a>
-        <div class="container-fluid bg-grey text-left">
-            <h2 class="text-center">CONTACT</h2>
-            <div class="row">
-                <div class="col-sm-5">
-                    <p>Contact us and we'll get back to you within 24 hours.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Uppsala, Sweden</p>
-                    <p><span class="glyphicon glyphicon-phone"></span> +46 018018018</p>
-                    <p><span class="glyphicon glyphicon-envelope"></span> support@mealmatch.se</p>
-                </div>
-                <div class="col-sm-7">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p>MealMatch &copy;2017 </p>
-
-    </footer>
+.navbar-brand {
+    padding: 0.2em;
     
-<A NAME="BOTTOM"></A>
-</body>
+    
+}
+.navbar-brand>img {
+    height: 100%;
+    width: auto;
+    
+}
+footer .glyphicon{
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    color: rgb(189,65,4);
+    
+    
+}
+
+/***  ***/
+
+/*** ID ***/
+
+#facebook:hover{
+    color: #fff !important;
+    background-color:#496ebc !important; 
+}
+#menu {
+    color: rgb(189,64,4)
+}
+
+#login-dp {
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(250,250,250,0.8);
+}
+
+#login-dp .help-block {
+    font-size:12px    
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+    letter-spacing: normal;
+    background-color:#3b5998;
+    color: #fff; 
+}
+
+#login-dp .form-group {
+    margin-bottom: 1em;
+}
+
+/********************************************************************************************/
+
+
+
+/********************************************************************************************/
+/************************************** INDEX ***********************************************/
+/********************************************************************************************/
+
+
+/*** CLASS ***/
+
+
+.startPage {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.2)), url("images/vegetables.jpg");
+    background-size: cover;
+    padding-top: 7em;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 9em;
+}
+
+/*** ID ***/
+
+#matchme {
+    margin-top: 0.7em;
+    color: white;
+    background-color: rgb(189,65,4);
+    font-family: RammettoOne;
+    font-size: 1.75em
+}
+
+
+
+
+/********************************************************************************************/
+
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
+
+
+.input-group {
+    display: flex;
+}
+
+.search_bar {
+    display:block;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 0.5em
+    
+}
+
+
+
+
+#search_glass {
+    margin: none;
+    border: none;
+    padding: none;
+    
+    }
+
+#ingredient-form {
+    border:none;
+    background-color: transparent;
+    box-shadow: none !important;
+}
+
+#user_menu{
+    color: rgb(75,75,75);
+    display: none;
+}
+    .navbar-nav li #user_menu:hover,
+.navbar-nav li.active #user_menu {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+
+.search-bar_clear {
+    flex-grow: 0;
+    flex-basis: 2em;
+}
+
+#search_clear {
+    margin: none;
+    border: none;
+    padding: none;
+}
+
+#clearButton {
+    margin-top: 0.35em;
+    margin-right: 1em;
+    padding: 0px;
+    background-color: transparent;
+    height: auto;
+    width: 1.5em;
+}
+
+#admin_menu {
+    color: rgb(75,75,75);
+    display: none;
+}
+
+.column_list {
+    padding-top: 1em;
+    height: 100px;
+}
+
+
+
+.container_ingredients {
+    padding-top: 2em;
+    padding-right: 2em;
+    padding-left: 2em;
+    
+    
+    
+}
+
+.column_ingredients {
+    padding-bottom: 0;
+    height: 30em;
+    overflow: auto;
+    
+}
+
+.rows_ingredients {
+    border-radius: 0.5em;
+    background-color: rgba(189,64,4,0.2)
+}
+
+
+
+
+
+#plusButton {
+    background-color: transparent;
+    padding: 0px;
+    
+}
+
+#search_add {
+    margin: none;
+    border: none;
+    padding: none;
+    height: 34px;
+    width: auto;
+}
+
+.glyphicon-plus {
+    color: green;
+    font-size: 1.7em;
+    padding-top: 0.7%;
+    padding-right: 1%;
+    padding-left: 1%;
+    font-weight: 
+}
+
+.glyphicon-search {
+    margin: none;
+    color: rgba(75,75,75, 0.7);
+    font-size: 2em;
+    background-color: transparent;
+    padding-top: 0.4%;
+    padding-left: 0.5%
+}
+
+.glyphicon-remove {
+    font-size: 1.7em;
+    color: rgba(75,75,75, 0.7);
+    padding-top: 25%;
+}
