@@ -1,0 +1,78 @@
+
+.row_profile {
+    padding-top: 50px; 
+}
+
+.glyphicon-user {
+    font-size: 20em;
+}
+
+.col-sm-2 {
+    border: 2px solid black;
+    height 40em;
+    margin-bottom: 1em;
+}
+
+.row-menu {
+    margin-top: 1em;
+    border: 2px dashed black;
+    margin-bottom: 1em;
+    height: 5em
+}
+
+.row-2 {
+    margin-top: 1em;
+    border: 2px dashed black;
+    height: 20em;
+    margin-bottom: 1em;
+}
+
+.col-sm-10 {
+    border: 2px solid black;
+    height: 64em;
+    
+    
+}
+
+.row-picture {
+    margin-top: 1em;
+    border: 2px dashed black;
+    margin-bottom: 1em;
+    width: 20em;
+    height: 20em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.user_container {
+    width:auto;
+    padding-top:50px;
+}
+
+
+
+.col-sm-1 {
+    border: 2px solid black;
+    height 40em;
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+#pager_2, #pager_3, #pager_4  {
+    display: none;
+}

@@ -1,0 +1,107 @@
+/********************************************************************************************/
+/************************************** INDEX ***********************************************/
+/********************************************************************************************/
+
+
+/*** CLASS ***/
+
+
+.startPage {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.2)), url("../images/vegetables.jpg");
+    background-size: cover;
+    padding-top: 7em;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 7em;
+}
+.glyphicon-remove {
+    font-size: 1.7em;
+    color: rgba(75,75,75, 0.7);
+    padding-top: 25%;
+}
+.glyphicon-search {
+    margin: none;
+    color: rgba(75,75,75, 0.7);
+    font-size: 2em;
+    background-color: transparent;
+    
+}
+.glyphicon-plus {
+    color: green;
+    font-size: 1.7em;
+    padding-top: 0.7%;
+    padding-right: 1%;
+    padding-left: 1%;
+    font-weight: 
+}
+.container_ingredients {
+    padding-top: 2em;
+    padding-right: 2em;
+    padding-left: 2em;  
+    
+}
+.column_ingredients {
+    padding-bottom: 0;
+    height: 30em;
+    overflow: auto;  
+}
+.rows_ingredients {
+    border-radius: 0.5em;
+}
+.searchbar_clear {
+    flex-grow: 0;
+    flex-basis: 2em;
+}
+.search_bar {
+    display:block;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 0.5em
+    
+}
+.input-group {
+    display:flex;
+}
+/*** ID ***/
+
+#matchme {
+    margin-top: 0.7em;
+    color: white;
+    background-color: rgb(189,65,4);
+    font-family: RammettoOne;
+    font-size: 1.75em
+}
+#searchbar_plus {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding-top: 0.6%;
+    padding-left: 0.5%
+}
+#searchbar_clear {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding-top: %;
+    padding-left: 0.9%;
+    padding-right: 0.9%
+}
+#searchbar_glass {
+    
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding-top: 0.6%;
+    padding-left: 0.5%
+}
+#ingredient-form {
+    border:none;
+    background-color: transparent;
+    box-shadow: none !important;
+}
+
+
+
+
+
+/********************************************************************************************/
+

@@ -1,0 +1,114 @@
+/********************************************************************************************/
+/************************************** GENERAL *********************************************/
+/********************************************************************************************/
+
+
+/*** TEXT-STYLE ***/
+@font-face {
+    font-family: 'RammettoOne'; /*a name to be used later*/
+    src: url('/font/RammettoOne-Regular.ttf'); /*URL to font*/
+}
+h2 {
+    color: rgb(75,75,75);
+}
+
+/*** CLASS ***/
+.container {
+    width:auto;
+}
+
+.panel {
+    border: 1px solid rgb(189, 65, 4);
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+    .navbar-nav li #user_menu:hover,
+.navbar-nav li.active #user_menu {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+/*** Navigation bar, at top of every site ***/
+.navbar {
+    margin-bottom: 0;
+    background-color: rgba(250,250,250,0.9);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: rgb(189,65,4) !important;
+}
+.navbar-nav li #menu:hover,
+.navbar-nav li.active #menu {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+
+
+.navbar-brand {
+    padding: 0.2em;
+    
+    
+}
+.navbar-brand>img {
+    height: 100%;
+    width: auto;
+    
+}
+footer .glyphicon{
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    color: rgb(189,65,4);
+    
+    
+}
+
+/***  ***/
+
+/*** ID ***/
+
+#facebook:hover{
+    color: #fff !important;
+    background-color:#496ebc !important; 
+}
+#menu {
+    color: rgb(189,64,4)
+}
+
+#login-dp {
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(250,250,250,0.8);
+}
+
+#login-dp .help-block {
+    font-size:12px    
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+    letter-spacing: normal;
+    background-color:#3b5998;
+    color: #fff; 
+}
+
+#login-dp .form-group {
+    margin-bottom: 1em;
+}
+#admin_menu {
+    color: rgb(75,75,75);
+    display: none;
+}
+#user_menu{
+    color: rgb(75,75,75);
+    display: none;
+}
+/********************************************************************************************/
