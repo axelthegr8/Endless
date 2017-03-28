@@ -10,11 +10,14 @@
     <!-- Adjusts with the display size, responsive -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="script/javascript.js"></script>
+    <script src="script/jquery.js"></script>
+    
 </head>
 
-<body id="indexPage">
+<body id="index_page">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -81,6 +84,7 @@
     </nav>
 
     <div class="startPage text-center">
+        
         <div class="container_logo">
             <img src="images/logo.png" alt="Logo" width="100%" height="auto">
             
@@ -89,24 +93,26 @@
         <div class="container_searchbar">
         <form class="search_bar">
             <div class="input-group">
-                <span class="glyphicon glyphicon-search"></span>
-                <input type="text" id="ingredient-form" class="form-control" size="50" placeholder="Add ingredient..." required>
-                <div class="search-bar_clear">
-                    <span class="glyphicon glyphicon-remove"></span>
+                <button class="button" id="searchbar_glass">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+                <input type="text" id="ingredient-form" id="add" class="form-control" size="50" placeholder="Add ingredient..." required>
+                <div class="searchbar_clear">
+                    <button class="button" id="searchbar_clear" onclick="clearInputField()">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
                 </div>
-                <span class="glyphicon glyphicon-plus"></span>
+                <button class="button" id="searchbar_plus" onclick="addItem()" value="Add">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
 
-                    <button type="button" class="btn btn-info dropdown-toggle" id="plus" data-toggle="dropdown">Alternatives
+                    <button type="button" class="btn btn-info dropdown-toggle" id="alternatives" data-toggle="dropdown">Alternatives
         <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="#">Vegetarian</a></li>
                         <li><a href="#">Gluten free</a></li>
                         <li><a href="#">Laktos free</a></li>
                     </ul>
-
-
-
-                
             </div>
         </form>
         </div>
@@ -117,11 +123,11 @@
 
                     <form class="search_bar">
                         <div class="input-group">
+                            <ol id="ingredients" style="font-size: 1.7em";>
+                                
+                            </ol>
 
-                            <input type="text" id="ingredient-form" class="form-control" size="50" placeholder="THIS IS YOUR INGREDIENT" required>
-                            <div class="search-bar_clear">
-                                <button type="button" class="btn" id="clearButton"><img src="http://www.istockphoto.com/landing/assets/unisporkal_engine/images/istock/istock_global-d7e401f19e6c19a9675205710664aae57336b66879fca2e2f55bdd926ea590f1.svg#clear-icon" id="search_clear"></button>
-                            </div>
+                            
 
 
                         </div>
