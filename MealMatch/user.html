@@ -1,2 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <title>Meal Match</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Adjusts with the display size, responsive -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script/javascript.js"></script>
+    <script src="script/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+
+
+
+</head>
+
+<body id="user_page">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" id="navText">
+                    <li><a id="admin_menu" href="">ADMIN</a></li>
+                    <li id="admin_menu">|<br>|<br>|</li>
+                    <li><a id="user_menu" href="">MY GROCERIES</a></li>
+                    <li><a id="user_menu" href="">MY RECIPES</a></li>
+                    <li><a id="user_menu" href="">MY FAVORITES</a></li>
+                    <li><a id="user_menu" href="">SETTINGS</a></li>
+                    <li id="user_menu">|<br>|<br>|</li>
+                    <li><a id="menu" href="">RECIPES</a></li>
+                    <li><a id="menu" href="">UNIT CONVERSION</a></li>
+                    <li class="dropdown">
+                        <a id="menu" href="#" class="dropdown-toggle" data-toggle="dropdown">LOGIN<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="login-dp">
+                            <li>
+                                <div class="login">
+                                    <p>Login via</p>
+                                    <div class="social-buttons">
+                                        <a class="btn btn-block btn-social btn-facebook" id="facebook" href="www.facebook.com"><span class="fa fa-facebook"></span>Facebook</a>
+
+
+                                    </div>
+                                    or
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Email adress</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email adress" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                            <div class="help-block text-right"><a href="">Forgot your password ?</a></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+											 <input type="checkbox"> Keep me logged-in
+											 </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bottom text-center">
+                                    <a href="#"><b>Sign up</b></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="user_container">
+        <div class="col-sm-2 col-left">
+            <div class="row-picture">
+                <img src="images/andreas.jpg" style="width: 20em; height: 20em;">
+                <!--                <span class="glyphicon glyphicon-user"></span>-->
+            </div>
+            <div class="row-2">
+                <span><h2>ABOUT</h2><p>Hello my name is Andreas. I love to cook.
+                        I work as a project chef in a project team. In my spare time, I love to dress up as BATMAN!</p></span>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <div class="row-menu">
+                <div class="col-sm-1 col-feed">
+                    <a class="pagerlink" id="1">
+                        <h2>FEED</h2>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a class="pagerlink" id="2">
+                        <h2>GROCERIES</h2>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a class="pagerlink" id="3">
+                        <h2>RECIPIES</h2>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a class="pagerlink" id="4">
+                        <h2>FAVORITES</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="row-2 options">
+                <div id="pager_1">
+                    <p>HEJ DET HÄR ÄR DIN FEED</p>
+                </div>
+                <div id="pager_2">
+                    <p>HEJ DET HÄR ÄR DIN GROCERIES</p>
+                </div>
+                <div id="pager_3">
+                    <p>HEJ DET HÄR ÄR DIN RECIPIES</p>
+                </div>
+                <div id="pager_4">
+                    <p>HEJ DET HÄR ÄR DIN FAVORITES</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a href="#TOP" title="To top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <a href="#BOTTOM" title="To bottom">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </a>
+        <div class="container-fluid bg-grey text-left">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Contact us and we'll get back to you within 24 hours.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Uppsala, Sweden</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +46 018018018</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> support@mealmatch.se</p>
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>MealMatch &copy;2017 </p>
+
+    </footer>
+    <A NAME="BOTTOM"></A>
+</body>
